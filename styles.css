@@ -1,804 +1,288 @@
-/* =========================
-   RESET
-========================= */
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
-/* =========================
-   BODY
-========================= */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f5;
-  color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: #080b3d;
 }
 
-
-/* =========================
-   MAIN CONTAINER
-========================= */
+.top-line {
+    height: 20px;
+    background: #080b3d;
+}
 
 .container {
-  max-width: 1120px;
-  margin: 50px auto;
-  padding: 0 20px;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    min-height: 760px;
 }
 
-
-/* =========================
-   BENTO GRID
-========================= */
-
-.bento-grid {
-  display: grid;
-
-  grid-template-columns:
-    1fr
-    1.7fr
-    1fr;
-
-  grid-template-rows:
-    325px
-    250px
-    245px;
-
-  gap: 18px;
-}
-
-
-/* =========================
-   GENERAL CARD
-========================= */
-
-.card {
-  border-radius: 13px;
-  overflow: hidden;
-  position: relative;
-}
-
-.card h1,
-.card h2,
-.card h3,
-.card p {
-  position: relative;
-  z-index: 2;
-}
-
-
-/* =========================
-   COLORS
-========================= */
-
-.cream {
-  background: #fff0df;
-}
-
-.yellow {
-  background: #ffd166;
-}
-
-.purple {
-  background: #7450d9;
-  color: white;
-}
-
-.lavender {
-  background: #ddd0ff;
-}
-
-.white {
-  background: white;
-}
-
-
-/* =========================
-   CARD 1
-========================= */
-
-.card-one {
-  padding: 38px 32px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-one h2 {
-  font-size: 35px;
-  line-height: 0.98;
-  letter-spacing: -2px;
-
-  max-width: 220px;
-}
-
-.card-one h2 span {
-  color: #7450d9;
-  font-style: italic;
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.button {
-  background: #ffc94f;
-  color: #6541cf;
-
-  width: fit-content;
-
-  padding: 17px 25px;
-
-  border-radius: 35px;
-
-  border: none;
-
-  font-size: 16px;
-  font-weight: bold;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-  background: #ffbd27;
-}
-
-
-/* =========================
-   HERO
-========================= */
+/* LEFT SIDE */
 
 .hero {
-  padding: 55px 45px;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-
-  text-align: center;
+    padding: 85px 20px 40px 0;
 }
 
 .hero h1 {
-  font-size: 57px;
-
-  line-height: 0.98;
-
-  letter-spacing: -4px;
+    font-size: 68px;
+    line-height: 1.15;
+    font-weight: 800;
 }
 
 .hero h1 span {
-  color: #ffd45c;
+    color: #ffb900;
+}
+
+.hero h1 b {
+    color: #080b3d;
 }
 
 .hero p {
-  margin-top: 28px;
-  font-size: 18px;
+    margin-top: 35px;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #292b3b;
+}
+
+.buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 40px;
+}
+
+button {
+    font-size: 18px;
+    padding: 17px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary {
+    border: none;
+    background: #2525e8;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    color: #182070;
+    border: 2px solid #182070;
 }
 
 
-/* =========================
-   STARS
-========================= */
+/* RIGHT SIDE */
 
-.stars {
-  color: #ffd45c;
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px 320px 300px;
+    gap: 20px;
+    padding: 20px 0 0 20px;
+}
 
-  font-size: 30px;
-
-  letter-spacing: 8px;
-
-  margin-top: 22px;
+.cards > div {
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 
-/* =========================
-   SCHEDULE
-========================= */
+/* PHONE */
 
-.schedule {
-  padding: 40px 30px;
+.phone-card {
+    background: #0873e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
 }
-
-.schedule h2 {
-  font-size: 31px;
-
-  line-height: 0.95;
-
-  letter-spacing: -2px;
-
-  max-width: 220px;
-}
-
-
-/* =========================
-   MINI CHART
-========================= */
-
-.mini-chart {
-  margin-top: 25px;
-
-  background: white;
-
-  border-radius: 18px;
-
-  padding: 22px;
-}
-
-.chart-title {
-  font-size: 15px;
-
-  font-weight: bold;
-
-  margin-bottom: 18px;
-}
-
-
-/* =========================
-   DAYS
-========================= */
-
-.days {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  color: #888;
-
-  font-size: 12px;
-}
-
-.days .active {
-  background: #ffdfe4;
-
-  padding: 7px 10px;
-
-  border-radius: 15px;
-
-  color: #d75870;
-}
-
-
-/* =========================
-   CHART BARS
-========================= */
-
-.bars {
-  height: 115px;
-
-  display: flex;
-
-  justify-content: space-around;
-
-  align-items: end;
-
-  margin-top: 15px;
-}
-
-.bar {
-  width: 20px;
-
-  background: #7450d9;
-
-  border-radius:
-    12px
-    12px
-    4px
-    4px;
-}
-
-.bar:nth-child(1) {
-  height: 40px;
-}
-
-.bar:nth-child(2) {
-  height: 65px;
-}
-
-.bar:nth-child(3) {
-  height: 100px;
-}
-
-.bar:nth-child(4) {
-  height: 78px;
-}
-
-.bar:nth-child(5) {
-  height: 52px;
-}
-
-
-/* =========================
-   SCHEDULE TEXT
-========================= */
-
-.schedule-text {
-  margin-top: 22px;
-
-  font-size: 15px;
-
-  line-height: 1.35;
-}
-
-
-/* =========================
-   FOOD CARD
-========================= */
-
-.ai-card {
-  padding: 30px 25px;
-}
-
-.ai-card h2 {
-  font-size: 33px;
-
-  line-height: 0.95;
-
-  letter-spacing: -2px;
-}
-
-
-/* =========================
-   PHONE
-========================= */
 
 .phone {
-  background: white;
+    width: 105px;
+    height: 205px;
+    background: #111;
+    border-radius: 18px;
+    padding: 7px;
+    box-shadow: 0 8px 15px #003c86;
+}
 
-  border-radius: 18px;
+.phone2 {
+    transform: translateY(20px);
+}
 
-  height: 185px;
+.screen {
+    height: 100%;
+    background: white;
+    border-radius: 13px;
+    padding: 20px 8px;
+    text-align: center;
+}
 
-  margin-top: 28px;
+.screen h4 {
+    color: #303040;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
 
-  padding: 20px;
+.screen p {
+    font-size: 8px;
+}
 
-  position: relative;
+.screen button {
+    background: #2525e8;
+    color: white;
+    border: none;
+    font-size: 7px;
+    padding: 5px 8px;
+    margin-top: 20px;
+}
+
+.small-box {
+    height: 45px;
+    width: 65px;
+    background: #e8edf5;
+    margin: 20px auto;
+    border-radius: 5px;
 }
 
 
-/* =========================
-   CHAT
-========================= */
+/* YELLOW */
+
+.yellow-card {
+    background: #ffb900;
+    padding: 35px;
+}
+
+.yellow-card h2 {
+    font-size: 35px;
+    color: #0873e8;
+    line-height: 1.15;
+}
+
+
+/* DARK BLUE */
+
+.dark-card {
+    background: #05083c;
+    padding: 40px 30px;
+}
+
+.dark-card h2 {
+    color: white;
+    font-size: 38px;
+    line-height: 1.3;
+}
+
+
+/* BRIGHT BLUE */
+
+.blue-card {
+    background: #2925e8;
+    padding: 40px 30px;
+}
+
+.blue-card h2 {
+    color: white;
+    font-size: 38px;
+    line-height: 1.3;
+}
+
+
+/* BOTTOM */
+
+.bottom-card {
+    background: #ffb900;
+    padding: 50px 20px;
+}
+
+.website {
+    height: 210px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.browser {
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    background: #f4f4f4;
+}
+
+.website p {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* CHAT */
 
 .chat {
-  background: #ffe8ed;
-
-  border-radius: 14px;
-
-  padding: 13px;
-
-  font-size: 12px;
-
-  width: 85%;
-
-  text-align: center;
-}
-
-.chat-response {
-  background: #fff1d0;
-
-  border-radius: 14px;
-
-  padding: 13px;
-
-  font-size: 12px;
-
-  width: 80%;
-
-  margin-top: 10px;
-
-  margin-left: 15%;
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0873e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 5px 15px #aaa;
 }
 
 
-/* =========================
-   ROUND ARROW
-========================= */
-
-.round-arrow {
-  position: absolute;
-
-  right: 12px;
-
-  bottom: 15px;
-
-  width: 50px;
-
-  height: 50px;
-
-  background: #ffc94f;
-
-  border-radius: 50%;
-
-  display: grid;
-
-  place-items: center;
-
-  color: #7450d9;
-
-  font-size: 27px;
-}
-
-
-/* =========================
-   ACCOUNTS CARD
-========================= */
-
-.accounts {
-  padding: 30px 25px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-}
-
-
-/* =========================
-   ICONS
-========================= */
-
-.social-icons {
-  display: flex;
-
-  gap: 12px;
-
-  margin-bottom: 20px;
-}
-
-.social-icon {
-  width: 48px;
-
-  height: 48px;
-
-  border-radius: 50%;
-
-  background: #ffd166;
-
-  display: grid;
-
-  place-items: center;
-
-  font-size: 20px;
-}
-
-
-/* =========================
-   ACCOUNTS TITLE
-========================= */
-
-.accounts h2 {
-  font-size: 31px;
-
-  line-height: 0.95;
-
-  letter-spacing: -2px;
-}
-
-
-/* =========================
-   COLLEGE CARD
-========================= */
-
-.consistency {
-  padding: 30px 25px;
-}
-
-.consistency h2 {
-  font-size: 30px;
-
-  line-height: 0.95;
-
-  letter-spacing: -2px;
-
-  max-width: 220px;
-}
-
-
-/* =========================
-   CALENDAR
-========================= */
-
-.calendar {
-  margin-top: 25px;
-
-  background: white;
-
-  border-radius: 14px;
-
-  overflow: hidden;
-}
-
-.calendar-header {
-  background: #7450d9;
-
-  color: white;
-
-  padding: 12px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  font-size: 13px;
-}
-
-.calendar-body {
-  display: flex;
-
-  justify-content: space-around;
-
-  padding: 20px 8px;
-}
-
-
-/* =========================
-   CHECK ICON
-========================= */
-
-.check {
-  width: 20px;
-
-  height: 20px;
-
-  border-radius: 50%;
-
-  background: #7450d9;
-
-  color: white;
-
-  display: grid;
-
-  place-items: center;
-
-  font-size: 12px;
-}
-
-
-/* =========================
-   STATS
-========================= */
-
-.stats {
-  padding: 35px 30px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-}
-
-.stats-number {
-  font-size: 58px;
-
-  letter-spacing: -5px;
-}
-
-.stats p {
-  font-size: 16px;
-}
-
-
-/* =========================
-   AVATARS
-========================= */
-
-.avatars {
-  display: flex;
-
-  margin-top: 20px;
-}
-
-.avatar {
-  width: 55px;
-
-  height: 55px;
-
-  border-radius: 50%;
-
-  border: 4px solid white;
-
-  margin-right: -8px;
-
-  display: grid;
-
-  place-items: center;
-
-  background: #ffb4a2;
-
-  font-size: 25px;
-}
-
-.avatar:nth-child(2) {
-  background: #ffd166;
-}
-
-.avatar:nth-child(3) {
-  background: #b9a4ff;
-}
-
-
-/* =========================
-   GROWTH CARD
-========================= */
-
-.growth {
-  padding: 25px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 35px;
-}
-
-
-/* =========================
-   GROWTH CHART
-========================= */
-
-.growth-chart {
-  background: white;
-
-  width: 195px;
-
-  height: 190px;
-
-  border-radius: 15px;
-
-  padding: 20px;
-
-  flex-shrink: 0;
-}
-
-.growth-label {
-  color: #888;
-
-  font-size: 13px;
-}
-
-.growth-number {
-  font-size: 28px;
-
-  margin-top: 5px;
-}
-
-
-/* =========================
-   GROWTH BARS
-========================= */
-
-.growth-bars {
-  display: flex;
-
-  align-items: end;
-
-  height: 65px;
-
-  gap: 8px;
-
-  margin-top: 15px;
-}
-
-.growth-bar {
-  width: 17px;
-
-  background: #7450d9;
-
-  border-radius: 8px 8px 0 0;
-}
-
-.growth-bar:nth-child(1) {
-  height: 30px;
-}
-
-.growth-bar:nth-child(2) {
-  height: 40px;
-}
-
-.growth-bar:nth-child(3) {
-  height: 50px;
-}
-
-.growth-bar:nth-child(4) {
-  height: 62px;
-}
-
-.growth-bar:nth-child(5) {
-  height: 68px;
-}
-
-
-/* =========================
-   GROWTH TITLE
-========================= */
-
-.growth h2 {
-  font-size: 40px;
-
-  line-height: 0.95;
-
-  letter-spacing: -3px;
-
-  max-width: 260px;
-}
-
-
-/* =========================
-   TABLET
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
 
-  .bento-grid {
-    grid-template-columns: 1fr 1fr;
+    .container {
+        grid-template-columns: 1fr;
+    }
 
-    grid-template-rows: auto;
-  }
+    .hero {
+        padding: 50px 10px;
+    }
 
-  .hero {
-    grid-column: span 2;
-  }
+    .hero h1 {
+        font-size: 48px;
+    }
 
-  .growth {
-    grid-column: span 2;
-  }
-
-  .schedule {
-    grid-row: span 2;
-  }
+    .cards {
+        padding: 10px 0;
+    }
 }
-
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 600px) {
 
-  .container {
-    margin: 20px auto;
-  }
+    .cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
-  .bento-grid {
-    display: flex;
+    .phone-card {
+        height: 250px;
+    }
 
-    flex-direction: column;
-  }
+    .yellow-card,
+    .dark-card,
+    .blue-card,
+    .bottom-card {
+        min-height: 250px;
+    }
 
-  .card {
-    min-height: 280px;
-  }
+    .buttons {
+        flex-direction: column;
+    }
 
-  .hero {
-    min-height: 330px;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .growth {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-  .growth h2 {
-    font-size: 34px;
-  }
+    .hero h1 {
+        font-size: 40px;
+    }
 }
